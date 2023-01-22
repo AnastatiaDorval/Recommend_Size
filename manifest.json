@@ -1,0 +1,13 @@
+{
+    "manifest_version": 1,
+    "name": "ShopSi",
+    "description": "Size Recommender!",
+    "version": "1.0",
+    "action": {
+        "default_icon": "128.png",
+        "default_popup": "popup.html"
+    },
+    "permissions": [
+        "tabs"
+    ]
+}
