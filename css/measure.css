@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Palette+Mosaic&display=swap');
+
+.box {
+    display: flex;
+    align-items: center;
+}
+
+
+.box .sliderBar {
+    height: 40px;
+    width: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.box .sliderBar input {
+    height: 7px;
+    width: 80%;
+    outline: none;
+    border-radius: 40px;
+    box-shadow: inset 0px 0px 4px rgba(0,0,0,0.2);
+}
+
+.box .sliderBar .value {
+    position: relative;
+    left: 10px;
+    font-size: 16px;
+    font-weight: 100;
+    text-align: center;
+    font-family: "Montserrat";
+    font-weight: 600;
+}
+
+.box .mesName {
+    position: relative;
+    left: 20px;
+    display: inline-block;
+    width: 40%;
+    font-family: "Montserrat";
+    font-size: 16px;;
+}
+
+button#enter-measurement {
+    margin-top: 5px;
+    width: 50%;
+    height: 50px;
+    border: 1px solid;
+    background: #2F1C53;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    left: 25%;
+}
+button#enter-measurement:hover {
+    border-color:#ffffff;
+    transition: .5s;
+    background-color: #c184ff;
+}
+button#reEnter {
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: #2F1C53;
+    color: #ffffff;
+    border-radius: 25px;
+    font-size: 17px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+}
+button#reEnter {
+    border-color:#ffffff;
+    transition: .5s;
+    background-color: #c184ff;
+}
+button#edit {
+    width: 20%;
+    height: 30px;
+    border: 1px solid;
+    background: #2F1C53;
+    color: #ffffff;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    outline: none;
+    position:absolute; 
+    margin-left:-50px;
+    left:50%;
+    width:100px;
+    bottom:10px;
+}
+button#edit:hover {
+    border-color:#ffffff;
+    transition: .5s;
+    background-color: #c184ff;
+}
+
+div#size {
+    display: block;
+    color: #c184ff;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 80%;
+    transform: translate(-50%,-50%);
+    height: 180px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+  
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #c184ff;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #c184ff;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+/* Controls the text in the switch */
+.switch .in-cm {
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    transition: all 0.4s ease-in-out;
+}
+
+.switch .in-cm::after {
+    content: attr(data-off);
+    position: absolute;
+    right: 5px;
+    color: #4d4d4d;
+    opacity: 1;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.switch .in-cm::before {
+    content: attr(data-on);
+    position: absolute;
+    left: 5px;
+    color: #ffffff;
+    opacity: 0;
+    text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.4);
+    transition: all 0.4s ease-in-out;
+}
+
+.switch input:checked~.in-cm::after {
+    opacity: 0;
+}
+
+.switch input:checked~.in-cm::before {
+    opacity: 1;
+}
+
+/* Rounded sliders */
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
