@@ -1,5 +1,70 @@
 <html>
+    <head>
+        <link rel="stylesheet" href="css/measure.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
     <body>
+        <h1>All the measurements!</h1>
+        <h3>Welcome! Let's get some of your measurements</h3>
+        <div class="measurement">
+            <form method="post">
+                <label class="switch">
+                    <input type="checkbox" id="unit">
+                    <span class="slider round" id="slider"></span>
+                    <span class="in-cm" data-on="IN" data-off="CM"></span>
+                </label>
+                    <div class="measurements">
+                        <div class="isCm">
+                            <div class="box">
+                                <label class="mesName">Bust/Chest</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="bustSlider" min="0" max="150" value="0">
+                                    <div class="value" id="bust-value">0</div>
+                                </div>
+                            </div>
+        
+                            <div class="box">
+                                <label class="mesName">Neckline</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="neckSlider" min="0" max="150" value="0">
+                                    <div class="value" id="neck-value">0</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <label class="mesName">Waist</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="waistSlider" min="0" max="150" value="0">
+                                    <div class="value" id="waist-value">0</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <label class="mesName">Low Hip</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="hipSlider" min="0" max="150" value="0">
+                                    <div class="value" id="hip-value">0</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <label class="mesName">Arm length</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="armSlider" min="0" max="150" value="0">
+                                    <div class="value" id="arm-value">0</div>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <label class="mesName">Inside Leg</label>
+                                <div class="sliderBar">
+                                    <input type="range" id="legSlider" min="0" max="150" value="0">
+                                    <div class="value" id="leg-value">0</div>
+                                </div>
+                            </div>
+                        </div>
+                    <button type="button" id="enter-measurement">Submit</button>
+            </form>
+        </div>
         <button id="popup">Go back home</button>
         <button id="size">Tell us your sizes!</button>
         <script src="js/measure.js"></script>

@@ -1,0 +1,11 @@
+div.selected label{
+    visibility: hidden;
+}
+
+div.selected select{
+    visibility: hidden;
+}
+
+div.selected select option{
+    visibility: hidden;
+}

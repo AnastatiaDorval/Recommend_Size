@@ -1,10 +1,38 @@
 <html>
-    <style>
-    </style>
+    <head>
+        <link rel="stylesheet" href="css/popup.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
     <body>
         <h1> Hello World! </h1>
         <h2>Ready for the perfect fit?</h2>
         <p id="measurements">Let's figure out your size...</p>
+        <div id="display">
+            <p>Here is your unit of choice:</p>
+            <p id="unit"></p>
+            <p>And here are your measurements:</p>
+            <table>
+                <tr>
+                    <th>Bust/Chest</th>
+                    <th>Neckline</th>
+                    <th>Waist</th>
+                    <th>Low Hip</th>
+                    <th>Arm Length</th>
+                    <th>Inside Leg</th>
+                </tr>
+                <tr>
+                    <td id="bust"></td>
+                    <td id="neck"></td>
+                    <td id="waist"></td>
+                    <td id="hip"></td>
+                    <td id="arm"></td>
+                    <td id="leg"></td>
+                </tr>
+                
+            </table>
+        </div>
         <button id="size">Tell us some of the sizes you currently wear -></button>
         <button id="measure">Enter your measurements -></button>
         <script src="js/popup.js"></script>

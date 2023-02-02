@@ -1,11 +1,108 @@
-<head>
-    <style>
-
-    </style>
+<HTML>
+    <head>
+        <link rel="stylesheet" href="css/size.css">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
     <body>
         <h1>Select Current Sizes You Wear</h1>
+        <div class="stores">
+            <input type="checkbox" id="gap" name="gap">
+            <label id="gap-label" for="gap">Gap</label>
+            <input type="checkbox" id="h&m" name="h&m">
+            <label id="h&m-label" for="h&m">H&M</label>
+            <input type="checkbox" id="zara" name="zara">
+            <label id="zara-label" for="zara">ZARA</label>
+            <input type="checkbox" id="uniqlo" name="uniqlo">
+            <label id="uniqlo-label" for="uniqlo">UNIQLO</label>
+            <button id="next">Next -></button>
+        </div>
+        <div class="selected" id="selected">
+            <div id="gap-selected">
+                <label id="gap-shirt-label" for="gap-shirt">What shirt size do you usually wear at Gap?</label>
+                <select id="gap-shirt" name="gap-shirt" class="dropdown">
+                    <option class="gap-shirt-option">XS</option>
+                    <option class="gap-shirt-option">S</option>
+                    <option class="gap-shirt-option">M</option>
+                    <option class="gap-shirt-option">L</option>
+                    <option class="gap-shirt-option">XL</option>
+                    <option class="gap-shirt-option">XXL</option>
+                </select>
+                <label id="gap-pants-label" for="gap-pants">What pants size do you usually wear at Gap?</label>
+                <select id="gap-pants" name="gap-pants" class="dropdown">
+                    <option class="gap-pants-option">XS</option>
+                    <option class="gap-pants-option">S</option>
+                    <option class="gap-pants-option">M</option>
+                    <option class="gap-pants-option">L</option>
+                    <option class="gap-pants-option">XL</option>
+                    <option class="gap-pants-option">XXL</option>
+                </select>
+            </div>
+            <div id="h&m-selected">
+                <label id="h&m-shirt-label" for="h&m-shirt">What shirt size do you usually wear at H&M?</label>
+                <select id="h&m-shirt" name="h&m-shirt" class="dropdown">
+                    <option class="h&m-shirt-option">XS</option>
+                    <option class="h&m-shirt-option">S</option>
+                    <option class="h&m-shirt-option">M</option>
+                    <option class="h&m-shirt-option">L</option>
+                    <option class="h&m-shirt-option">XL</option>
+                    <option class="h&m-shirt-option">XXL</option>
+                </select>
+                <label id="h&m-pants-label" for="h&m-pants">What pants size do you usually wear at H&M?</label>
+                <select id="h&m-pants" name="h&m-pants" class="dropdown">
+                    <option class="h&m-pants-option">XS</option>
+                    <option class="h&m-pants-option">S</option>
+                    <option class="h&m-pants-option">M</option>
+                    <option class="h&m-pants-option">L</option>
+                    <option class="h&m-pants-option">XL</option>
+                    <option class="h&m-pants-option">XXL</option>
+                </select>
+            </div>
+            <div id="zara-selected">
+                <label id="zara-shirt-label" for="zara-shirt">What shirt size do you usually wear at ZARA?</label>
+                <select id="zara-shirt" name="zara-shirt" class="dropdown">
+                    <option class="zara-shirt-option">XS</option>
+                    <option class="zara-shirt-option">S</option>
+                    <option class="zara-shirt-option">M</option>
+                    <option class="zara-shirt-option">L</option>
+                    <option class="zara-shirt-option">XL</option>
+                    <option class="zara-shirt-option">XXL</option>
+                </select>
+                <label id="zara-pants-label" for="zara-pants">What pants size do you usually wear at ZARA?</label>
+                <select id="zara-pants" name="zara-pants" class="dropdown">
+                    <option class="zara-pants-option">XS</option>
+                    <option class="zara-pants-option">S</option>
+                    <option class="zara-pants-option">M</option>
+                    <option class="zara-pants-option">L</option>
+                    <option class="zara-pants-option">XL</option>
+                    <option class="zara-pants-option">XXL</option>
+                </select>
+            </div>
+            <div id="uniqlo-selected">
+                <label id="uniqlo-shirt-label" for="uniqlo-shirt">What shirt size do you usually wear at UNIQLO?</label>
+                <select id="uniqlo-shirt" name="uniqlo-shirt" class="dropdown">
+                    <option class="uniqlo-shirt-option">XS</option>
+                    <option class="uniqlo-shirt-option">S</option>
+                    <option class="uniqlo-shirt-option">M</option>
+                    <option class="uniqlo-shirt-option">L</option>
+                    <option class="uniqlo-shirt-option">XL</option>
+                    <option class="uniqlo-shirt-option">XXL</option>
+                </select>
+                <label id="uniqlo-pants-label" for="uniqlo-pants">What pants size do you usually wear at UNIQLO</label>
+                <select id="uniqlo-pants" name="uniqlo-pants" class="dropdown">
+                    <option class="uniqlo-pants-option">XS</option>
+                    <option class="uniqlo-pants-option">S</option>
+                    <option class="uniqlo-pants-option">M</option>
+                    <option class="uniqlo-pants-option">L</option>
+                    <option class="uniqlo-pants-option">XL</option>
+                    <option class="uniqlo-pants-option">XXL</option>
+                </select>
+                <button id="back">Go Back</button>
+            </div>
+        </div>
         <button id="popup">Go Back Home</button>
         <button id="measure">Enter some measurements</button>
         <script src="js/size.js"></script>
     </body>
-</head>
+</HTML>
