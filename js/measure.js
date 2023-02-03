@@ -77,12 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (checkbox.checked) {
                 document.getElementById(slider).setAttribute("max", Math.round(max/2.54));
                 document.getElementById(value).innerHTML = Math.round(value2/2.54);
+                document.getElementById(slider).value = Math.round(value2/2.54);
                 localStorage.setItem(measures[i], Math.round(value2/2.54))
                 localStorage.setItem("unit", "in");
                 console.log('Checked');
             } else {
                 document.getElementById(slider).setAttribute("max", Math.round(max*2.54));
                 document.getElementById(value).innerHTML = Math.round(value2*2.54);
+                document.getElementById(slider).value = Math.round(value2*2.54);
                 localStorage.setItem(measures[i], Math.round(value2*2.54))
                 localStorage.setItem("unit", "cm");
                 console.log('Not checked');
