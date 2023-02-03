@@ -60,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function () {
         for (let i = 0; i < measures.length; i++) {
             var slider = measures[i]+"Slider";
             var value = measures[i]+"-value";
+            document.getElementById(slider).setAttribute("max", 150);
             if(localStorage.getItem(measures[i]) != null || localStorage.getItem(measures[i]) != 0){
                 document.getElementById(slider).value = localStorage.getItem(measures[i]);
                 document.getElementById(value).innerHTML = localStorage.getItem(measures[i]);
@@ -82,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 document.getElementById(slider).setAttribute("max", Math.round(max*2.54));
                 document.getElementById(value).innerHTML = Math.round(value2*2.54);
-                localStorage.setItem(measures[i], Math.round(value2/2.54))
+                localStorage.setItem(measures[i], Math.round(value2*2.54))
                 localStorage.setItem("unit", "cm");
                 console.log('Not checked');
             }
