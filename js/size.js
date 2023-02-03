@@ -102,10 +102,16 @@ document.addEventListener('DOMContentLoaded', function () {
                 //displaying selected store question options
                 var shirt_options = document.getElementsByClassName(store+"-shirt-option");
                 for (let j = 0; j < shirt_options.length; j++){
+                    if(localStorage.getItem(store+"-shirt-size") == shirt_options.item(j).textContent){
+                        shirt_options.item(j).selected = true;
+                    }
                     shirt_options.item(j).style.visibility = "visible";
                 }
                 var pants_options = document.getElementsByClassName(store+"-pants-option");
                 for (let j = 0; j < pants_options.length; j++){
+                    if(pants_options.item(j).textContent == localStorage.getItem(store+"-pants-size")){
+                        pants_options.item(j).selected = true;
+                    }
                     pants_options.item(j).style.visibility = "visible";
                 }
             }
@@ -151,10 +157,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const shirt_options = document.getElementsByClassName("gap-shirt-option");
         var name = "gap-shirt-size";
         for (let k = 0; k < shirt_options.length; k++){
-            //select saved option
-            if(shirt_options.item(k).textContent == localStorage.getItem(name)){
-                shirt_options.item(k).selected = true;
-            }
             //save selected option
             if(shirt_options.item(k).selected){
                 localStorage.setItem(name, shirt_options.item(k).textContent);
@@ -165,10 +167,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const pants_options = document.getElementsByClassName("gap-pants-option");
         var name = "gap-pants-size";
         for (let k = 0; k < pants_options.length; k++){
-            //select saved option
-            if(pants_options.item(k).textContent == localStorage.getItem(name)){
-                pants_options.item(k).selected = true;
-            }
             //save selected option
             if(pants_options.item(k).selected){
                 localStorage.setItem(name, pants_options.item(k).textContent);
@@ -179,10 +177,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const shirt_options = document.getElementsByClassName("h&m-shirt-option");
         var name = "h&m-shirt-size";
         for (let k = 0; k < shirt_options.length; k++){
-            //select saved option
-            if(shirt_options.item(k).textContent == localStorage.getItem(name)){
-                shirt_options.item(k).selected = true;
-            }
             //save selected option
             if(shirt_options.item(k).selected){
                 localStorage.setItem(name, shirt_options.item(k).textContent);
@@ -193,10 +187,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const pants_options = document.getElementsByClassName("h&m-pants-option");
         var name = "h&m-pants-size";
         for (let k = 0; k < pants_options.length; k++){
-            //select saved option
-            if(pants_options.item(k).textContent == localStorage.getItem(name)){
-                pants_options.item(k).selected = true;
-            }
             //save selected option
             if(pants_options.item(k).selected){
                 localStorage.setItem(name, pants_options.item(k).textContent);
@@ -207,10 +197,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const shirt_options = document.getElementsByClassName("zara-shirt-option");
         var name = "zara-shirt-size";
         for (let k = 0; k < shirt_options.length; k++){
-            //select saved option
-            if(shirt_options.item(k).textContent == localStorage.getItem(name)){
-                shirt_options.item(k).selected = true;
-            }
             //save selected option
             if(shirt_options.item(k).selected){
                 localStorage.setItem(name, shirt_options.item(k).textContent);
@@ -221,10 +207,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const pants_options = document.getElementsByClassName("zara-pants-option");
         var name = "zara-pants-size";
         for (let k = 0; k < pants_options.length; k++){
-            //select saved option
-            if(pants_options.item(k).textContent == localStorage.getItem(name)){
-                pants_options.item(k).selected = true;
-            }
             //save selected option
             if(pants_options.item(k).selected){
                 localStorage.setItem(name, pants_options.item(k).textContent);
@@ -235,10 +217,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const shirt_options = document.getElementsByClassName("uniqlo-shirt-option");
         var name = "uniqlo-shirt-size";
         for (let k = 0; k < shirt_options.length; k++){
-            //select saved option
-            if(shirt_options.item(k).textContent == localStorage.getItem(name)){
-                shirt_options.item(k).selected = true;
-            }
             //save selected option
             if(shirt_options.item(k).selected){
                 localStorage.setItem(name, shirt_options.item(k).textContent);
@@ -249,10 +227,6 @@ document.addEventListener('DOMContentLoaded', function () {
         const pants_options = document.getElementsByClassName("uniqlo-pants-option");
         var name = "uniqlo-pants-size";
         for (let k = 0; k < pants_options.length; k++){
-            //select saved option
-            if(pants_options.item(k).textContent == localStorage.getItem(name)){
-                pants_options.item(k).selected = true;
-            }
             //save selected option
             if(pants_options.item(k).selected){
                 localStorage.setItem(name, pants_options.item(k).textContent);
