@@ -28,5 +28,11 @@
         "activeTab",
         "storage",
         "fileSystem"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://*"],
+            "js": ["contentScript.js"]
+        }
     ]
 }
