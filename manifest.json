@@ -7,7 +7,26 @@
         "default_icon": "128.png",
         "default_popup": "popup.html"
     },
+    "content_scripts": [
+        {
+            "matches": ["https://*.dollskill.com/products/*"],
+            "js": ["contentScript.js"]
+        }
+    ],
+    "host_permissions": [
+        "https://*.dollskill.com/*",
+        "https://*/*"
+    ],
+    "externally_connectable": {
+        "matches" : ["https://*.dollskill.com/*"]
+    },
+    "background": {
+        "service_worker": "backgroundScript.js"
+    },
     "permissions": [
-        "tabs"
+        "tabs",
+        "activeTab",
+        "storage",
+        "fileSystem"
     ]
 }

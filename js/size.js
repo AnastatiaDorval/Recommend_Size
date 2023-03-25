@@ -15,7 +15,12 @@ var stores_selected = [];
 
 /* Displaying Items Based on what we check */
 document.addEventListener('DOMContentLoaded', function () {
-    var selected_stores = localStorage.getItem("stores_selected").split(",");
+    if (typeof(localStorage.getItem("stores_selected")) != undefined){
+        var selected_stores = localStorage.getItem("stores_selected").split(",");
+    }
+    else {
+        var selected_stores = [];
+    }
     for (let i = 0; i < selected_stores.length; i++){
         var checkbox = document.getElementById(selected_stores[i]);
         checkbox.checked = true;
