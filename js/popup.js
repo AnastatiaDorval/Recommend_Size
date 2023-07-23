@@ -18,5 +18,6 @@ document.getElementById("unit").innerHTML = localStorage.getItem("unit");
 for (let i = 0; i < measures.length; i++) {
     if(localStorage.getItem(measures[i]) != null){
         document.getElementById(measures[i]).innerHTML = localStorage.getItem(measures[i]);
-    }   
+    } 
+    //if(localStorage.getItem(measures[i]) = window.storeInfo)  
 }
